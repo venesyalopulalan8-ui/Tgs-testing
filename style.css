@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+  background:
+    radial-gradient(circle at top left, #20ace4f5, transparent 55%),
+    #eef2ff;
+  color: #172033;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  width: 100%;
+  max-width: 400px;
+}
+
+.app-header {
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0 0 10px;
+  font-size: 30px;
+}
+
+.app-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.calculator {
+  padding: 22px;
+  border-radius: 22px;
+  background: #101828;
+  box-shadow: 0 20px 45px rgb(15 23 42 / 20%);
+}
+
+.calculator-header {
+  margin-bottom: 18px;
+  color: #cbd5e1;
+  font-size: 15px;
+}
+
+.screen {
+  min-height: 130px;
+  padding: 18px 14px;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  background: #1d293d;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.expression {
+  min-height: 22px;
+  margin-bottom: 12px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.display {
+  color: #ffffff;
+  font-size: clamp(24px, 7vw, 36px);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.message {
+  min-height: 36px;
+  margin: 10px 0 4px;
+  color: #fbbf24;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.buttons button {
+  min-height: 58px;
+  padding: 10px 3px;
+  border: none;
+  border-radius: 11px;
+  background: #2b374d;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 22px;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: filter 0.15s, transform 0.1s;
+}
+
+.buttons button:hover {
+  filter: brightness(1.2);
+}
+
+.buttons button:active {
+  transform: scale(0.95);
+}
+
+.buttons button:focus-visible {
+  outline: 3px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+.buttons .utility {
+  background: #3d4961;
+  font-size: 15px;
+}
+
+.buttons .danger {
+  background: #a32248;
+  font-size: 16px;
+}
+
+.buttons .function {
+  background: #263951;
+  color: #bae6fd;
+  font-size: 20px;
+}
+
+.buttons .operator {
+  background: #4338ca;
+}
+
+.buttons .equals {
+  background: #059669;
+}
+
+.calculator-note {
+  margin: 18px 0 0;
+  color: #94a3b8;
+  text-align: center;
+  font-size: 11px;
+}
+
+.keyboard-help {
+  margin-top: 20px;
+  color: #64748b;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+@media (max-width: 350px) {
+  .calculator {
+    padding: 15px;
+  }
+
+  .buttons {
+    gap: 7px;
+  }
+
+  .buttons button {
+    min-height: 52px;
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kalkulator Standar</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Kalkulator</h1>
+      
+
+    <section class="calculator" aria-label="Kalkulator standar">
+      <div class="calculator-header">
+
+      </div>
+
+      <div class="screen">
+        <div id="expression" class="expression"></div>
+
+        <div
+          id="display"
+          class="display"
+          role="status"
+          aria-live="polite"
+        >0</div>
+      </div>
+
+      <p
+        id="message"
+        class="message"
+        role="status"
+        aria-live="polite"
+      ></p>
+
+      <div id="buttons" class="buttons">
+  <button type="button" class="utility"
+          data-action="percent">%</button>
+
+  <button type="button" class="utility"
+          data-action="delete"
+          aria-label="Hapus digit terakhir">DEL</button>
+  <button type="button" class="danger"
+          data-action="clear"
+          style="grid-column: span 2;">AC</button>
+  <!-- Tombol berikutnya tetap seperti sebelumnya -->
+
+        <button type="button" class="function"
+                data-action="reciprocal">1/x</button>
+
+        <button type="button" class="function"
+                data-action="square">x²</button>
+
+        <button type="button" class="function"
+                data-action="sqrt">√x</button>
+
+        <button type="button" class="operator"
+                data-action="operator" data-value="/"
+                aria-label="Bagi">÷</button>
+
+        <button type="button" data-action="digit" data-value="7">7</button>
+        <button type="button" data-action="digit" data-value="8">8</button>
+        <button type="button" data-action="digit" data-value="9">9</button>
+
+        <button type="button" class="operator"
+                data-action="operator" data-value="*"
+                aria-label="Kali">×</button>
+
+        <button type="button" data-action="digit" data-value="4">4</button>
+        <button type="button" data-action="digit" data-value="5">5</button>
+        <button type="button" data-action="digit" data-value="6">6</button>
+
+        <button type="button" class="operator"
+                data-action="operator" data-value="-"
+                aria-label="Kurang">−</button>
+
+        <button type="button" data-action="digit" data-value="1">1</button>
+        <button type="button" data-action="digit" data-value="2">2</button>
+        <button type="button" data-action="digit" data-value="3">3</button>
+
+        <button type="button" class="operator"
+                data-action="operator" data-value="+"
+                aria-label="Tambah">+</button>
+
+        <button type="button" class="utility"
+                data-action="sign"
+                aria-label="Ubah tanda positif atau negatif">±</button>
+
+        <button type="button" data-action="digit" data-value="0">0</button>
+
+        <button type="button" data-action="decimal"
+                aria-label="Titik desimal">.</button>
+
+        <button type="button" class="equals"
+                data-action="equals"
+                aria-label="Sama dengan">=</button>
+      </div>
+
+    </section>
+
+  </main>
+</body>
+</html>
